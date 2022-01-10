@@ -1,3 +1,5 @@
+## Springboot
+
 ### 스프링부트 프로젝트 생성 
 ```
 https://start.spring.io/
@@ -29,7 +31,8 @@ spring-boot devtools (html, js, css 변경 적용)
 https://imspear.tistory.com/138
 ```
 
-### Spring coding guide
+## Documents
+### Spring Coding Guide
 ```shell
 https://spring.io/guides
 ```
@@ -52,7 +55,11 @@ JDBC URL : jdbc:h2:~/test
 
 - Generic H2 (Server)
 - jdbc:h2:tcp://localhost/~/test
+```
 
+### JPA
+```
+https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#repositories.core-concepts
 ```
 
 ### Jar build
@@ -63,4 +70,3 @@ JDBC URL : jdbc:h2:~/test
  
  java -jar demo-0.0.1-SANPSHOT.jar 실행시 정상이면 성공
 ```
-

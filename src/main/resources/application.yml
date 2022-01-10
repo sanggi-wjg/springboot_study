@@ -7,7 +7,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: create # ddl 자동 생성
     properties:
       hibernate:
         show_sql: true
@@ -16,3 +16,4 @@ spring:
 logging:
   level:
     org.hibernate.SQL: debug
+    org.hibernate.type: trace # sql query print 시,  `?` 에서  data param 을 출력함

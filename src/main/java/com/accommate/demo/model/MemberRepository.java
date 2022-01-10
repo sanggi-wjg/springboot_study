@@ -1,4 +1,4 @@
-package com.accommate.demo;
+package com.accommate.demo.model;
 
 import org.springframework.stereotype.Repository;
 
