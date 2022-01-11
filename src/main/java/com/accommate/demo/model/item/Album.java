@@ -1,13 +1,15 @@
 package com.accommate.demo.model.item;
 
-import com.accommate.demo.model.item.Item;
+import lombok.Getter;
+import lombok.Setter;
 
-import javax.persistence.DiscriminatorColumn;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 
 @Entity
 @DiscriminatorValue("Album")
+@Getter
+@Setter
 public class Album extends Item {
 
     private String artist;
