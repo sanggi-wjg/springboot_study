@@ -1,5 +1,6 @@
 package com.accommate.demo.model.item;
 
+import com.accommate.demo.exception.NotEnoughStockQuantityException;
 import com.accommate.demo.model.Category;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,4 +27,17 @@ public abstract class Item {
 
     @ManyToMany(mappedBy = "items")
     private List<Category> categories = new ArrayList<>();
+
+    // 비지니스 로직
+    public void addStock(int quantity) {
+        this.stockQuantity += quantity;
+    }
+
+    public void removeStock(int quantity) {
+        if (this.stockQuantity - quantity < 0) {
+            throw new NotEnoughStockQuantityException("need more stock");
+        } else {
+            this.stockQuantity -= quantity;
+        }
+    }
 }
