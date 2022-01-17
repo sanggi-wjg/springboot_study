@@ -7,7 +7,7 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: create # ddl 자동 생성
+      ddl-auto: update # create, create-drop, update, validate
     properties:
       hibernate:
         show_sql: true

@@ -16,11 +16,14 @@ public class ItemRepository {
     private EntityManager entityManager;
 
     public void save(Item item) {
-        if (item.getId() == null) {
+        /*if
+        update 시에 merge 를 사용하는 것보다 entity 에서 변경 감지를 사용하는 것이 더 좋음
+        (item.getId() == null) {
             entityManager.persist(item);
         } else {
             entityManager.merge(item);
-        }
+        }*/
+        entityManager.persist(item);
     }
 
     public Item findById(Long id) {

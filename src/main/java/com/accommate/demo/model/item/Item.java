@@ -2,8 +2,10 @@ package com.accommate.demo.model.item;
 
 import com.accommate.demo.exception.NotEnoughStockQuantityException;
 import com.accommate.demo.model.Category;
+import com.accommate.demo.service.UpdateBookDto;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.sql.Update;
 
 import javax.persistence.*;
 import java.util.ArrayList;

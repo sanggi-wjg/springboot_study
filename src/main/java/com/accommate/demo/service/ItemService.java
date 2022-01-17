@@ -1,5 +1,6 @@
 package com.accommate.demo.service;
 
+import com.accommate.demo.model.item.Book;
 import com.accommate.demo.model.item.Item;
 import com.accommate.demo.repository.ItemRepository;
 import com.accommate.demo.repository.MemberRepository;
@@ -19,6 +20,12 @@ public class ItemService {
     @Transactional
     public void saveItem(Item item) {
         itemRepository.save(item);
+    }
+
+    @Transactional
+    public void updateBook(Long itemId, UpdateBookDto param) {
+        Book findBook = (Book) itemRepository.findById(itemId);
+        findBook.updateBookInfo(param);
     }
 
     @Transactional(readOnly = true)
