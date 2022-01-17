@@ -30,7 +30,7 @@ public class OrderRepository {
     }
 
     public List<Order> findAll() {
-        return entityManager.createQuery("SELECT o FROM Order o JOIN Member m ", Order.class)
+        return entityManager.createQuery("SELECT o FROM Order o JOIN Member m", Order.class)
                 .getResultList();
     }
 

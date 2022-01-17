@@ -5,6 +5,7 @@ import com.accommate.demo.model.item.Item;
 import com.accommate.demo.repository.ItemRepository;
 import com.accommate.demo.repository.MemberRepository;
 import com.accommate.demo.repository.OrderRepository;
+import com.accommate.demo.repository.OrderSearch;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -52,10 +53,10 @@ public class OrderService {
     }
 
     /*
-    * 주문 검색
-    * */
-//    public List<Order> search(OrderSearch orderSearch){
-//
-//    }
+     * 주문 검색
+     * */
+    public List<Order> findOrders(OrderSearch orderSearch) {
+        return orderRepository.search(orderSearch);
+    }
 
 }
